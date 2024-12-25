@@ -1,5 +1,6 @@
 package com.umarfarid.complaintbox
 
+import android.content.Intent
 import android.os.Bundle
 
 
@@ -20,12 +21,14 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.umarfarid.complaintbox.R
+import com.umarfarid.complaintbox.ui.auth.AuthViewModel
+import com.umarfarid.complaintbox.ui.auth.LoginActivity
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
 
         setContentView(R.layout.activity_main)
         val toolbar: Toolbar =findViewById<Toolbar>(R.id.toolbar)
@@ -35,6 +38,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
+        findViewById<FloatingActionButton>(R.id.addNew).setOnClickListener(){
+            startActivity(Intent(this, Add_Complaint::class.java))
+        }
         val imageView = findViewById<ImageView>(R.id.drawer_icon)
         imageView.setOnClickListener { view: View? ->
             if (drawer.isDrawerVisible(GravityCompat.START)) {
@@ -55,6 +61,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.item_Logout) {
+            val viewModel = AuthViewModel()
+            viewModel.logout()
+            startActivity(Intent(this, LoginActivity::class.java))
 
         } else if (item.itemId==R.id.item_About_Us){
 

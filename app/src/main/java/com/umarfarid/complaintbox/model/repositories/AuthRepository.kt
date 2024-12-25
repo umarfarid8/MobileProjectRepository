@@ -40,7 +40,8 @@ class AuthRepository {
         return FirebaseAuth.getInstance().currentUser
     }
 
-    fun logout() {
-        TODO("Not yet implemented")
+     fun logout():Result<Boolean>{
+        FirebaseAuth.getInstance().signOut()
+        return Result.success(true)
     }
 }
