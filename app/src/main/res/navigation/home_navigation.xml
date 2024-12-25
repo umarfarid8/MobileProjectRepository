@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/item_home">
+
+    <fragment
+        android:id="@+id/item_home"
+        android:name="com.umarfarid.main.HomeFragment"
+        android:label="BoxFragment" />
+    <fragment
+        android:id="@+id/item_box"
+        android:name="com.umarfarid.main.BoxFragment"
+        android:label="BoxFragment" />
+
+    <fragment
+        android:id="@+id/item_profile"
+        android:name="com.umarfarid.main.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/item_setting"
+        android:name="com.umarfarid.main.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>

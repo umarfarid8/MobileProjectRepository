@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "527365700585",
+    "project_id": "complaintmanagementsyste-12d62",
+    "storage_bucket": "complaintmanagementsyste-12d62.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527365700585:android:6e5e8cd4cc8db530b9e978",
+        "android_client_info": {
+          "package_name": "com.umarfarid.complaintbox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh3nW_dEinA_nKvGQKXcfRWRFCg15YEEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
